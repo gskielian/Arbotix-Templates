@@ -6,9 +6,11 @@ int main(void)
   FILE *file;
   file = fopen("/dev/ttyUSB0","w");
 
+  printf("waiting for servo to boot\n");
   //waitfor it to boot
-  sleep(7);
-  printf("waited 7 seconds");
+  sleep(4);
+  printf("waited 4 seconds\n");
+  printf("starting servo code\n");
 
   //send position data
   while(1) {
